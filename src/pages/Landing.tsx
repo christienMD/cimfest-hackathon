@@ -1,9 +1,13 @@
-import Navbar from '@/components/sections/Navbar/Navbar';
+
+import LandingPageHero from "@/components/sections/LandingPageHero/LandingPageHero";
+
 
 const LandingPage = () => {
   return (
     <div>
-      <Navbar />
+
+      <LandingPageHero />
+
     </div>
   );
 };

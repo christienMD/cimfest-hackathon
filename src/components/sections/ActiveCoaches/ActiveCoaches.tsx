@@ -48,7 +48,7 @@ const ActiveCoaches = () => {
         </div>
 
         {/* Coaches Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-6 max-w-6xl mx-auto">
           {coaches.map((coach) => (
             <div key={coach.id} className="flex justify-center">
               <ActiveCoachCard
@@ -59,7 +59,7 @@ const ActiveCoaches = () => {
                 onLearnMore={() =>
                   console.log(`Learn more about ${coach.name}`)
                 }
-                className="w-full max-w-[280px] sm:max-w-[320px]"
+                className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]"
               />
             </div>
           ))}

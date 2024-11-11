@@ -31,7 +31,7 @@ const Navbar = () => {
     </ul>
   );
 
-  const AuthButtons = ({ className = '' }) => (
+  const AuthButtons = ({ className = "" }) => (
     <div
       className={`flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-4 ${className}`}
     >
@@ -40,12 +40,19 @@ const Navbar = () => {
           Login
         </Link>
       </Button>
-      <Button
-        className="text-white   border px-8 text-xl py-6 border-indigo-600 rounded-full bg-afro-base-bg w-full md:w-auto  hover:text-black"
-        variant="outline"
+      <button
+        className="group relative h-[46px] w-full sm:w-[140px] text-base font-medium"
+        style={{
+          padding: "3px",
+          background: "linear-gradient(90deg, #411294 0%, #9C64FF 100%)",
+          borderRadius: "20px",
+        }}
       >
-        <Link to="/signup">Get started</Link>
-      </Button>
+        <div className="absolute inset-0 rounded-[20px] bg-gradient-to-r from-[#411294] to-[#9C64FF] opacity-0 group-hover:opacity-20 transition-opacity" />
+        <div className="h-full w-full flex items-center justify-center bg-gradient-to-r from-[#323052] to-[#411294] text-white rounded-[17px]">
+          Get started
+        </div>
+      </button>
     </div>
   );
 

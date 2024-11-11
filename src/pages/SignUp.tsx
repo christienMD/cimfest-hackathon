@@ -1,7 +1,8 @@
+import SignupPage from "@/components/sections/SignUpPage/SignUpPage"
 
 const SignUp = () => {
   return (
-    <div>SignUp</div>
+    <SignupPage />
   )
 }
 

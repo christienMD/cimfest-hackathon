@@ -1,4 +1,4 @@
-import ActiveCoachCard from '@/components/cards/ActiveCoachCard/ActiveCoachCard';
+import CoachCard from '@/components/cards/ActiveCoachCard/CoachCard';
 
 interface Coach {
   id: string;
@@ -49,7 +49,7 @@ const ActiveCoaches = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-6 max-w-6xl mx-auto">
           {coaches.map((coach) => (
             <div key={coach.id} className="flex justify-center">
-              <ActiveCoachCard
+              <CoachCard
                 name={coach.name}
                 role={coach.role}
                 imageUrl={coach.imageUrl}

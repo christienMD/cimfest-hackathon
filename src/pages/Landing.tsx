@@ -25,6 +25,19 @@ const LandingPage = () => {
       <div className="bg-afro-base-bg text-white py-12 px-2">
         <Footer footerData={footerData} />
       </div>
+      <EngagedArtists />
+      <ActiveCoaches />
+      <div className="bg-afro-base-bg text-white py-12 px-2">
+        <HowItWork />
+      </div>
+
+      <div className="bg-afro-base-bg">
+        <FaqsComponent faqs={faqs} />
+      </div>
+
+      <div className="bg-afro-base-bg text-white py-12 px-2">
+        <Footer footerData={footerData} />
+      </div>
     </div>
   );
 };

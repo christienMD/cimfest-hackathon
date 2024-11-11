@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { MenuIcon } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Button } from '@/components/ui/button';
+import { MenuIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-import { navLinks } from "@/utils/data";
+import { navLinks } from '@/utils/data';
 import {
   Sheet,
   SheetContent,
@@ -13,9 +13,10 @@ import AnnouncementAlert from "../AnnouncementAlert/AnnouncementAlert";
 import GetStarted from "../GetStarted/GetStarted";
 import Logo from "../Logo/Logo";
 
+
 const Navbar = () => {
   const NavigationLinks = ({
-    className = "navbar-center mb-4 md:mb-0 font-bold text-xl",
+    className = 'navbar-center mb-4 md:mb-0 font-bold text-xl',
   }) => (
     <ul
       className={`flex flex-col md:flex-row space-y-2 fond-bold text-xl md:space-y-0 md:space-x-4 ${className}`}
@@ -33,7 +34,7 @@ const Navbar = () => {
     </ul>
   );
 
-  const AuthButtons = ({ className = "" }) => (
+  const AuthButtons = ({ className = '' }) => (
     <div
       className={`flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-4 ${className}`}
     >
@@ -89,7 +90,7 @@ const Navbar = () => {
                   <div className="h-full flex flex-col p-6">
                     <SheetHeader className="mb-6">
                       <h2 className="text-3xl font-bold flex flex-col-1">
-                        <Link to="/">AFRO TALENT</Link>
+                        <Link to="/">AFRO COACH</Link>
                       </h2>
                     </SheetHeader>
 

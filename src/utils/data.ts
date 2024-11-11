@@ -1,6 +1,6 @@
 export const navLinks = [
     {to:"/home", label: "Home"},
-    {to: "/catalog", label: "Catalog"},
+    {to: "/talent-hub", label: "Talent Hub"},
     {to: "/about", label: "About"},
     {to: "/contact", label: "Contact"}
   
@@ -38,30 +38,31 @@ export const footerData  = [
     ]
   },
 ];
+
 export const faqs = [
   {
     question: 'What is this platform about?',
     answer:
-      'Our platform connects content creators with buyers, facilitating the sale and purchase of digital content.',
+      'Our platform connects emerging Cameroonian artists with expert coaches and investors, providing personalized guidance to grow their talents and gain industry visibility.',
   },
   {
-    question: 'How do I start selling my content?',
+    question: 'How do I start finding a coach?',
     answer:
-      'To start selling, create an account, upload your content, set your prices, and start promoting your work to potential buyers.',
+      'Simply create an account, complete your profile, and explore available coaches who match your musical interests and goals.',
   },
   {
-    question: 'Is my content protected?',
+    question: 'Can I apply to become a coach on the platform?',
     answer:
-      "Yes, we use industry-standard security measures to protect your content and ensure it's only accessible to authorized buyers.",
+      'Yes, established artists and experts in music can apply to become coaches. Reach out through our "Partner with Us" section to get started.',
   },
   {
-    question: 'Is my content protected?',
+    question: 'Is there a fee for coaching sessions?',
     answer:
-      "Yes, we use industry-standard security measures to protect your content and ensure it's only accessible to authorized buyers.",
+      'Coaches set their own fees, and you can view these details on their profiles. Some sessions may have introductory discounts or special offers.',
   },
   {
-    question: 'Is my content protected?',
+    question: 'How does the platform support investor connections?',
     answer:
-      "Yes, we use industry-standard security measures to protect your content and ensure it's only accessible to authorized buyers.",
+      'Our platform showcases artists with potential and provides exposure to investors interested in discovering fresh talent in the Cameroonian music industry.',
   },
 ];

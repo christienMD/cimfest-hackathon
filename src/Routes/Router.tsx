@@ -1,38 +1,48 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "@/pages/Home";
-import AboutPage from "@/pages/About";
-import LoginPage from "@/pages/Login";
-import SignupPage from "@/pages/SignUp";
-import LandingPage from "@/pages/Landing";
-import NotFoundPage from "@/pages/NotFoundPage";
-import CoachChannel from "@/pages/CoachChannel";
 
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import HomePage from '@/pages/Home';
+import AboutPage from '@/pages/About';
+import LoginPage from '@/pages/Login';
+import SignupPage from '@/pages/SignUp';
+import LandingPage from '@/pages/Landing';
+import NotFoundPage from '@/pages/NotFoundPage';
+import AIQuestions from '@/pages/AIQuestions';
+import TalentHub from '@/pages/TalentHub';
+import CoachChannel from "@/pages/CoachChannel";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <LandingPage />,
     errorElement: <NotFoundPage />,
   },
   {
-    path: "/about",
+    path: '/about',
     element: <AboutPage />,
   },
   {
-    path: "/home",
+    path: '/talent-hub',
+    element: <TalentHub />,
+  },
+  {
+    path: '/home',
     element: <HomePage />,
   },
   {
-    path: "/login",
+    path: '/login',
     element: <LoginPage />,
   },
   {
-    path: "/signup",
+    path: '/signup',
     element: <SignupPage />,
   },
   {
     path: "/coach-channel",
     element: <CoachChannel />,
+  },
+  {
+    path: '/suggest',
+    element: <AIQuestions />,
   },
 ]);
 

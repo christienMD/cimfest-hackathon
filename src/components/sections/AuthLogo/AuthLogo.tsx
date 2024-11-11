@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
 
 const AuthLogo = () => {
   return (
-    <div className="flex items-center justify-center gap-2 mb-6 md:mb-8">
+    <Link
+      to="/"
+      className="flex items-center justify-center gap-2 mb-6 md:mb-8"
+    >
       <div className="p-0.5">
         <img
           src="https://www.figma.com/file/Hw24rKXR9xcsS8NyturKwh/image/8482786bdc2517476ff9f26bc62e5adbf3a5ceb8"
@@ -10,8 +14,8 @@ const AuthLogo = () => {
         />
       </div>
       <span className="font-bold text-2xl">AFRO COACH</span>
-    </div>
+    </Link>
   );
-}
+};
 
-export default AuthLogo
+export default AuthLogo;

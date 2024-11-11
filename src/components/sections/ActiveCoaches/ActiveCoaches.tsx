@@ -1,4 +1,4 @@
-import CoachCard from "@/components/cards/ActiveCoachCard/CoachCard";
+import CoachCard from '@/components/cards/ActiveCoachCard/CoachCard';
 
 interface Coach {
   id: string;
@@ -10,28 +10,28 @@ interface Coach {
 
 const coaches: Coach[] = [
   {
-    id: "1",
-    name: "Donny Elwood",
-    role: "Vocal Coach",
-    imageUrl: "/coach.png",
+    id: '1',
+    name: 'Salatiel',
+    role: 'Record label/Beatmaker',
+    imageUrl: '/images/salatiel.jpeg',
     description:
-      "Expert vocal coach specializing in African Jazz and Folk music. Known for training emerging artists in Yaoundé. Former judge on The Voice Afrique and mentor to numerous successful Cameroonian artists.",
+      'Salatiel, a renowned Cameroonian producer, singer-songwriter, and CEO of Alpha Better Records, is known for his Afrobeat and Afro-pop influence.',
   },
   {
-    id: "2",
-    name: "Ndedi Dibango",
-    role: "Music Production Coach",
-    imageUrl: "/coach.png",
+    id: '2',
+    name: 'Jovi',
+    role: 'Song writter/Singer',
+    imageUrl: '/images/jovi.jpeg',
     description:
-      "Leading music production coach with over 15 years of experience. Specializes in modern Afropop and traditional fusion. Head of production at Galaxy Records Douala.",
+      'Jovi, a pioneering Cameroonian rapper, producer, and founder of New Bell Music, is acclaimed for blending hip-hop with traditional Cameroonian sounds.',
   },
   {
-    id: "3",
-    name: "Charlotte Dipanda",
-    role: "Performance Coach",
-    imageUrl: "/coach.png",
+    id: '3',
+    name: 'Charlotte Dipanda',
+    role: 'Singer/Song-writer',
+    imageUrl: '/images/charlotte-dipanda.jpeg',
     description:
-      "Renowned performance and stage presence coach. Expert in both traditional and contemporary Cameroonian music styles. Provides masterclasses in artist development and stage craft.",
+      'Charlotte Dipanda, a celebrated Cameroonian singer-songwriter, is known for her soulful vocals and blending traditional rhythms with contemporary African music.',
   },
 ];
 
@@ -45,7 +45,6 @@ const ActiveCoaches = () => {
             See the most <span className="font-bold">active Coaches</span>
           </h2>
         </div>
-
         {/* Coaches Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-6 max-w-6xl mx-auto">
           {coaches.map((coach) => (

@@ -1,3 +1,5 @@
+import GetStarted from '../GetStarted/GetStarted';
+
 function HowItWork() {
   return (
     <div className="section-container">
@@ -5,8 +7,7 @@ function HowItWork() {
         <div className="w-full md:w-2/5 max-w-sm mx-auto">
           <div className="rounded-lg overflow-hidden shadow-xl aspect-w-4 aspect-h-3">
             <img
-              src="https://images.unsplash.com/photo-1728750002011-e81fc6a631a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D"
-              alt="Selling Content"
+              src="/images/cultural vestival.jpeg"
               className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
@@ -21,9 +22,7 @@ function HowItWork() {
             adipisicing elit. Veritatis repellat ipsa ipsum adipisci.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="w-full sm:w-auto px-6 py-3 rounded-xl border-2 font-semibold transition-all duration-300 hover:shadow-lg hover:bg-gray-100">
-              Learn More
-            </button>
+            <GetStarted />
           </div>
         </div>
       </div>

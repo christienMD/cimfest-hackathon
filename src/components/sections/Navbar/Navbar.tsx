@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/sheet";
 import AnnouncementAlert from "../AnnouncementAlert/AnnouncementAlert";
 import GetStarted from "../GetStarted/GetStarted";
+import Logo from "../Logo/Logo";
 
 const Navbar = () => {
   const NavigationLinks = ({
@@ -57,16 +58,7 @@ const Navbar = () => {
                 <Link to="/">AFRO TALENT</Link>
               </h1>
             </div> */}
-            <div className="flex items-center gap-3">
-              <img
-                src="https://www.figma.com/file/Hw24rKXR9xcsS8NyturKwh/image/8482786bdc2517476ff9f26bc62e5adbf3a5ceb8"
-                alt="Afro Coach"
-                width={80}
-                height={80}
-                className="w-14 h-14"
-              />
-              <span className="text-2xl font-bold">AFRO COACH</span>
-            </div>
+            <Logo/>
 
             {/* Desktop Navigation - Centered */}
             <div className="hidden md:flex flex-1 justify-center gap-8">

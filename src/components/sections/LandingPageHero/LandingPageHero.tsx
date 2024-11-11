@@ -1,4 +1,3 @@
-
 const LandingPageHero = () => {
   return (
     <section className="bg-afro-base-bg flex items-center justify-center py-20 px-4 relative overflow-hidden">
@@ -16,13 +15,22 @@ const LandingPageHero = () => {
               transparent 100%
             )
           `,
-          filter: "blur(70px)",
+          filter: 'blur(70px)',
         }}
       />
 
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
+          <h1
+            className="heading text-white
+          
+          
+          
+          
+          
+          
+          "
+          >
             Empowering the Next Generation
             <br />
             <span className="text-[#A495FF] block mt-1">of Music.</span>
@@ -38,9 +46,9 @@ const LandingPageHero = () => {
             <button
               className="group relative h-[46px] w-full sm:w-[140px] text-base font-medium"
               style={{
-                padding: "3px",
-                background: "linear-gradient(90deg, #411294 0%, #9C64FF 100%)",
-                borderRadius: "20px",
+                padding: '3px',
+                background: 'linear-gradient(90deg, #411294 0%, #9C64FF 100%)',
+                borderRadius: '20px',
               }}
             >
               <div className="absolute inset-0 rounded-[20px] bg-gradient-to-r from-[#411294] to-[#9C64FF] opacity-0 group-hover:opacity-20 transition-opacity" />

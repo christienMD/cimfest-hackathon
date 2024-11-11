@@ -4,7 +4,7 @@ const LandingPageHero = () => {
     <section className="bg-afro-base-bg flex items-center justify-center py-16 px-4 relative overflow-hidden">
       {/* Gradient background effect */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[500px] h-[800px]"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[500px] h-[800px] mt-20"
         style={{
           background: `
             radial-gradient(

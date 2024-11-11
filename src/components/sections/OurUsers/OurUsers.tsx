@@ -23,7 +23,7 @@ const OurUsers = () => {
               <UsersCards
                 title="For Coach"
                 link="/catalog"
-                imageSrc="https://www.figma.com/file/Hw24rKXR9xcsS8NyturKwh/image/65c1f0e8f6ba599d0ab324c54ab6e218c59ed948"
+                imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLf77CRaASZBtNc9MweIm3nb3qryDn67aIYw&s"
               />
             </div>
 
@@ -32,7 +32,7 @@ const OurUsers = () => {
               <UsersCards
                 title="For Investors"
                 link="/catalog"
-                imageSrc="https://www.figma.com/file/Hw24rKXR9xcsS8NyturKwh/image/65c1f0e8f6ba599d0ab324c54ab6e218c59ed948"
+                imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ZaBLA2gb7CEWGW-WGcYdVxNBzXmBiYJO9w&s"
               />
             </div>
           </div>

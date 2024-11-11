@@ -5,6 +5,7 @@ import LoginPage from "@/pages/Login";
 import SignupPage from "@/pages/SignUp";
 import LandingPage from "@/pages/Landing";
 import NotFoundPage from "@/pages/NotFoundPage";
+import AIQuestions from "@/pages/AIQuestions";
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <SignupPage />,
   },
+  {
+    path: "/suggest",
+    element: <AIQuestions />,
+  }
 ]);
 
 function Router() {

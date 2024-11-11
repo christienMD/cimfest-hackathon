@@ -1,7 +1,8 @@
+import HomePage from "@/components/sections/HomePage/HomePage"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <HomePage />
   )
 }
 

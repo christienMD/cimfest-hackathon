@@ -26,7 +26,7 @@ const LandingPage = () => {
       <ActiveCoaches />
 
       <OurUsers />
-      <div className="bg-afro-base-bg">
+      <div className="bg-afro-base-bg p-8">
         <Invest />
       </div>
       <AccessCoach />

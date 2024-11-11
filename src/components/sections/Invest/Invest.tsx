@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 
 function Invest() {
   return (
-    <div className=" bg-purple-600 p-8 text-center text-white md:p-12">
+    <div className=" bg-purple-600 p-8 rounded-2xl text-center text-white md:p-12">
       <div className="space-y-6">
         <h2 className="text-3xl font-bold md:text-4xl">Looking to invest</h2>
 

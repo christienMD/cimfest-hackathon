@@ -4,15 +4,20 @@ import Navbar from '@/components/sections/Navbar/Navbar';
 import Footer from '@/components/sections/Footer/Footer'; // Import your custom Footer
 import { faqs, footerData } from '@/utils/data';
 import FaqsComponent from '@/components/sections/Faqs/Faqs';
+import TrustedBy from '@/components/sections/TrustedBy/TrustedBy';
+import OurUsers from '@/components/sections/OurUsers/OurUsers';
 
 const LandingPage = () => {
   return (
     <div>
       <Navbar />
       <LandingPageHero />
+      <TrustedBy />
       <div className="bg-afro-base-bg text-white py-12 px-2">
         <HowItWork />
       </div>
+
+      <OurUsers />
 
       <div className="bg-afro-base-bg">
         <FaqsComponent faqs={faqs} />

@@ -1,8 +1,7 @@
+import LoginPage from "@/components/sections/LoginPage/LoginPage";
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+  return <LoginPage />;
+};
 
-export default Login
+export default Login;

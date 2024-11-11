@@ -1,22 +1,46 @@
 import { Link } from "react-router-dom";
+import AuthLogo from "../AuthLogo/AuthLogo";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+// Form schema
+const loginSchema = z.object({
+  phoneNumber: z
+    .string()
+    .regex(/^\+?[0-9]{8,15}$/, "Please enter a valid phone number"),
+  password: z.string().min(1, "Password is required"),
+  keepSignedIn: z.boolean().default(false),
+});
+
+type LoginFormData = z.infer<typeof loginSchema>;
 
 const LoginPage = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginFormData>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {
+      phoneNumber: "",
+      password: "",
+      keepSignedIn: false,
+    },
+  });
+
+  const onSubmit = (data: LoginFormData) => {
+    console.log("Login Form Data:", data);
+    // Handle login logic here
+  };
+
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
       {/* Left Content */}
       <div className="w-full md:w-[50%] flex items-center justify-center p-4 bg-white">
         <div className="w-full max-w-[453px] px-4 md:px-6">
           {/* Logo and Title */}
-          <div className="flex items-center justify-center gap-2 mb-6 md:mb-8">
-            <div className="p-0.5">
-              <img
-                src="https://www.figma.com/file/Hw24rKXR9xcsS8NyturKwh/image/8482786bdc2517476ff9f26bc62e5adbf3a5ceb8"
-                alt="Afro Coach Logo"
-                className="w-10 h-10 md:w-14 md:h-14"
-              />
-            </div>
-            <span className="font-bold text-2xl">AFRO COACH</span>
-          </div>
+          <AuthLogo />
 
           {/* Sign In Section */}
           <div className="mb-6 md:mb-8 text-center">
@@ -25,16 +49,22 @@ const LoginPage = () => {
           </div>
 
           {/* Form */}
-          <form className="w-full space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="w-full space-y-4">
             <div>
               <label className="text-sm text-gray-700 mb-1.5 block">
                 Phone number
               </label>
               <input
+                {...register("phoneNumber")}
                 type="tel"
                 placeholder="Phone number"
                 className="w-full h-[46px] px-4 rounded-[20px] border border-gray-200 focus:outline-none focus:border-[#6E1EFA] focus:ring-1 focus:ring-[#6E1EFA] transition-colors"
               />
+              {errors.phoneNumber && (
+                <p className="text-xs text-red-500 mt-1">
+                  {errors.phoneNumber.message}
+                </p>
+              )}
             </div>
 
             <div>
@@ -42,15 +72,22 @@ const LoginPage = () => {
                 Password
               </label>
               <input
+                {...register("password")}
                 type="password"
                 placeholder="Password"
                 className="w-full h-[46px] px-4 rounded-[20px] border border-gray-200 focus:outline-none focus:border-[#6E1EFA] focus:ring-1 focus:ring-[#6E1EFA] transition-colors"
               />
+              {errors.password && (
+                <p className="text-xs text-red-500 mt-1">
+                  {errors.password.message}
+                </p>
+              )}
             </div>
 
             <div className="flex items-center justify-between pt-2">
               <div className="flex items-center">
                 <input
+                  {...register("keepSignedIn")}
                   type="checkbox"
                   id="remember"
                   className="w-4 h-4 rounded border-gray-300 text-[#6E1EFA] focus:ring-[#6E1EFA]"

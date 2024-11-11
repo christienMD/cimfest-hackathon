@@ -1,9 +1,9 @@
 import React from 'react';
 
-import CIMFEST from '../../../assets/images/cimfest.png';
-import BLUE from '../../../assets/images/blue.png';
-import G2G from '../../../assets/images/g2g.jpg';
-import ALPHA_BETTER from '../../../assets/images/alpha_better.jpeg';
+import CIMFEST from '../../../../public/images/cimfest.png';
+import BLUE from '../../../../public/images/blue.png';
+import G2G from '../../../../public/images/g2g.jpg';
+import ALPHA_BETTER from '../../../../public/images/alpha_better.jpeg';
 
 interface LogoProps {
   src: string;
@@ -32,7 +32,7 @@ const TrustedBy: React.FC = () => {
   ];
 
   return (
-    <section className="bg-afro-base-bg py-8 md:py-12">
+    <section className="bg-afro-base-bg text-white py-8 md:py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center space-y-6 md:space-y-8">
           <h2 className="heading ">Trusted by</h2>

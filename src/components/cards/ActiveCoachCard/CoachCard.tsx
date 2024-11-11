@@ -13,14 +13,14 @@ const CoachCard = ({
   imageUrl,
   description,
   onLearnMore,
-  className = "",
+  className = '',
 }: ActiveCoachCardProps) => {
   return (
     <div
       className={`bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full ${className}`}
     >
       {/* Image Container - significantly reduced height on mobile */}
-      <div className="w-full h-44 sm:h-auto sm:aspect-[4/3] overflow-hidden bg-gray-100">
+      <div className="w-full h-52 sm:h-auto sm:aspect-[4/3] overflow-hidden bg-gray-100">
         <img
           src={imageUrl}
           alt={`${name} - ${role}`}

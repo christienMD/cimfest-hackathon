@@ -36,7 +36,7 @@ const LandingPage = () => {
       </div>
 
       <div className="bg-afro-base-bg text-white py-12 px-2">
-        <Footer footerData={footerData} />
+        <Footer logoRoute='/' footerData={footerData} />
       </div>
     </div>
   );

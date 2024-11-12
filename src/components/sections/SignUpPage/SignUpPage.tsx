@@ -106,13 +106,6 @@ const SignupForm = () => {
           </div>
         </div>
       </div>
-      <p className="text-base my-6 py-4 px-6 sm:px-10 text-center text-gray-500 w-full sm:max-w-4xl">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta eaque
-        laudantium animi ullam, commodi amet nobis exercitationem quasi error
-        dignissimos ipsam similique mollitia nostrum cumque, fuga necessitatibus
-        deserunt quis! Neque ullam voluptate facilis nobis eligendi aut sint,
-        magnam amet odio.
-      </p>
     </>
   );
 };
@@ -542,12 +535,14 @@ const CoachForm = () => {
             </Link>
           </div>
 
-          <Button
-            type="submit"
-            className="w-full h-[46px] bg-[#6E1EFA] text-white rounded-[20px] mt-4 hover:bg-[#5c19d4] hover:opacity-75 transition-colors"
-          >
-            <Link to="/coach-channel">Sign up</Link>
-          </Button>
+          <Link to="/coach-channel">
+            <Button
+              type="submit"
+              className="w-full h-[46px] bg-[#6E1EFA] text-white rounded-[20px] mt-4 hover:bg-[#5c19d4] hover:opacity-75 transition-colors"
+            >
+              Sign up
+            </Button>
+          </Link>
 
           <div className="text-center text-sm text-gray-500">
             Already have an account?{" "}

@@ -1,9 +1,15 @@
+import AboutPage from "@/components/AboutPage/AboutPage"
+import Footer from "@/components/sections/Footer/Footer"
+import Navbar from "@/components/sections/Navbar/Navbar"
+import { footerData } from "@/utils/data"
 
 const About = () => {
   return (
-    <div className="bg-afro-base-bg p-6 h-screen">
-    <h1 className="text-3xl text-white font-bold">About AfroCoach</h1>
-  </div>
+    <>
+    <Navbar />
+    <AboutPage />
+    <Footer footerData={footerData} />
+    </>
   )
 }
 

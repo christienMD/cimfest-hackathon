@@ -18,6 +18,7 @@ interface Props {
   showAuth?: boolean;
 }
 
+
 const Navbar = ({ showAuth = true }: Props) => {
   const NavigationLinks = ({
     className = "navbar-center mb-4 md:mb-0 font-bold text-xl",
@@ -91,7 +92,7 @@ const Navbar = ({ showAuth = true }: Props) => {
               <Sheet>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon" className="ml-2">
-                    <MenuIcon className="h-6 w-6" />
+                    <MenuIcon className="h-8 w-8" />
                   </Button>
                 </SheetTrigger>
                 <SheetContent

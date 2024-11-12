@@ -61,9 +61,9 @@ const suggestedCoachesData = [
 
 const otherCoachesData = [
   {
-    name: 'Maahlox Le Vibeur',
+    name: 'Nkeng Stephens',
     role: 'Music Producer & Artist',
-    imageUrl: '/images/maahlox.jpeg',
+    imageUrl: '/images/nkeng-stephens.jpeg',
     description:
       'Innovative producer and artist known for his unique style in urban music. Expertise in modern production techniques and artist development.',
   },

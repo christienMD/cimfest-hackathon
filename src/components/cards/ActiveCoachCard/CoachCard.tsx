@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 interface ActiveCoachCardProps {
   name: string;
   role: string;
@@ -41,12 +43,14 @@ const CoachCard = ({
           {description}
         </p>
 
-        <button
-          onClick={onLearnMore}
-          className="w-full py-2.5 bg-[#D4BBFF] hover:bg-[#C4A2FF] text-[#411294] hover:opacity-90 rounded-full transition-colors duration-200 text-sm font-medium mt-auto"
-        >
-          see profile
-        </button>
+        <Link to="/coach-profile">
+          <button
+            onClick={onLearnMore}
+            className="w-full py-2.5 bg-[#D4BBFF] hover:bg-[#C4A2FF] text-[#411294] hover:opacity-90 rounded-full transition-colors duration-200 text-sm font-medium mt-auto"
+          >
+            see profile
+          </button>
+        </Link>
       </div>
     </div>
   );

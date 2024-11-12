@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AnnouncementAlert month="October" percentageDiscount={20} />
+      <AnnouncementAlert month="November" percentageDiscount={20} />
       <nav className="fixed top-6 left-0 right-0 bg-afro-base-bg text-white z-30 ">
         <div className="px-4 md:px-11">
           <div className="flex items-center h-16 md:h-20">

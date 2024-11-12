@@ -9,8 +9,8 @@ const AnnouncementAlert = ({ percentageDiscount, month, className }: Props) => {
     <div
       className={` fixed z-30 top-0 right-0 text-sm bg-indigo-500 text-white  text-center w-full h-6 sm:text-base ${className}`}
     >
-      Get {percentageDiscount}% of on all sales for the month of{' '}
-      <span className="capitalize">{month}</span>
+      Get {percentageDiscount}% off this{' '}
+      <span className="capitalize">{month}</span> if you are a blue subscribe{' '}
     </div>
   );
 };

@@ -9,6 +9,7 @@ import NotFoundPage from '@/pages/NotFoundPage';
 import AIQuestions from '@/pages/AIQuestions';
 import TalentHub from '@/pages/TalentHub';
 import CoachChannel from "@/pages/CoachChannel";
+import Contact from '@/pages/Contact';
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/contact',
-    element: <AIQuestions />,
+    element: <Contact />,
   },
 ]);
 

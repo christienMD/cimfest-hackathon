@@ -16,9 +16,10 @@ import { UserProfile } from '../UserProfile/UserProfile';
 
 interface Props {
   showAuth?: boolean;
+  logoRoute?: string;
 }
 
-const Navbar = ({ showAuth = true }: Props) => {
+const Navbar = ({ showAuth = true, logoRoute }: Props) => {
   const NavigationLinks = ({
     className = 'navbar-center mb-4 md:mb-0 font-bold text-xl',
   }) => (
@@ -67,7 +68,7 @@ const Navbar = ({ showAuth = true }: Props) => {
       <nav className="fixed top-6 left-0 right-0 bg-afro-base-bg text-white z-30 ">
         <div className="px-4 md:px-11">
           <div className="flex items-center h-16 md:h-20">
-            <Logo />
+            <Logo route={logoRoute} />
 
             {/* Desktop Navigation - Centered */}
             <div className="hidden md:flex flex-1 justify-center gap-8">

@@ -319,14 +319,14 @@ const ArtistForm = () => {
             </Link>
           </div>
 
-          <button className="w-full h-[46px] bg-[#6E1EFA] text-white rounded-[20px] mt-4 hover:bg-[#5c19d4] hover:opacity-75 transition-colors">
-            <Link
-              to="/suggest"
-              // type="submit"
-            >
+          <Link
+            to="/suggest"
+            // type="submit"
+          >
+            <button className="w-full h-[46px] bg-[#6E1EFA] text-white rounded-[20px] mt-4 hover:bg-[#5c19d4] hover:opacity-75 transition-colors">
               Sign up
-            </Link>
-          </button>
+            </button>
+          </Link>
 
           <div className="text-center text-sm text-gray-500">
             Already have an account?{" "}

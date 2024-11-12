@@ -1,5 +1,6 @@
 import { Award, Star, Music, Users, Clock, Trophy, Disc } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 
 const CoachProfile = () => {
   return (
@@ -155,9 +156,12 @@ const CoachProfile = () => {
             <Card className="bg-[#2E2B4A] text-white border-none">
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold mb-4">Get Started</h2>
-                <button className="w-full bg-gradient-to-r from-[#411294] to-[#9C64FF] text-white py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">
-                  Schedule Consultation
-                </button>
+                <Link to="/coach-channel">
+                  <button className="w-full bg-gradient-to-r from-[#411294] to-[#9C64FF] text-white py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">
+                    Schedule Consultation
+                  </button>
+                </Link>
+
                 <p className="text-sm text-gray-300 mt-4 text-center">
                   Limited spots available for 2024
                 </p>

@@ -1,5 +1,5 @@
-"use client";
-import { useState } from "react";
+'use client';
+import { useState } from 'react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,37 +8,37 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Link } from "react-router-dom";
+} from '@/components/ui/dropdown-menu';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Link } from 'react-router-dom';
 
 export function UserProfile() {
   const [isOpen, setIsOpen] = useState(false);
 
   const getInitials = (name: string) => {
     return name
-      .split(" ")
+      .split(' ')
       .map((n) => n[0])
-      .join("")
+      .join('')
       .toUpperCase();
   };
 
   const menuItems = [
     {
-      label: "Profile",
-      href: `/profile/user-dashboard`,
+      label: 'Profile',
+      href: `/artist-profile`,
       disabled: false,
     },
-    { label: "Dashboard", href: "#", disabled: true },
-    { label: "Post a Request", href: "#", disabled: false },
-    { label: "Refer a Friend", href: "#", disabled: false },
+    { label: 'Dashboard', href: '#', disabled: true },
+    { label: 'Post a Request', href: '#', disabled: false },
+    { label: 'Refer a Friend', href: '#', disabled: false },
     {
-      label: "Settings",
+      label: 'Settings',
       href: `/profile/settings`,
       disabled: false,
     },
-    { label: "Billing and payments", href: "#", disabled: true },
-    { label: "Help & support", href: "#", disabled: false },
+    { label: 'Billing and payments', href: '#', disabled: true },
+    { label: 'Help & support', href: '#', disabled: false },
   ];
 
   return (
@@ -46,9 +46,9 @@ export function UserProfile() {
       <DropdownMenuTrigger asChild>
         <button className="relative w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center rounded-full text-sm font-semibold text-white hover:bg-[#411294]/20 focus:outline-none focus:ring-2 focus:ring-[#411294] focus:ring-offset-2 focus:ring-offset-[#23213] transition-all">
           <Avatar className="w-[38px] h-[38px]">
-            <AvatarImage src={""} alt="Profile" referrerPolicy="no-referrer" />
+            <AvatarImage src={''} alt="Profile" referrerPolicy="no-referrer" />
             <AvatarFallback className="bg-gradient-to-r from-[#411294] to-[#9C64FF] text-white">
-              {getInitials("Njinda Salome")}
+              {getInitials('Njinda Salome')}
             </AvatarFallback>
           </Avatar>
           <span className="absolute bottom-0 right-0 block h-3 w-3 rounded-full ring-2 ring-[#23213] bg-green-500" />
@@ -81,10 +81,10 @@ export function UserProfile() {
                 to={item.href}
                 className={`${
                   item.disabled
-                    ? "cursor-text text-gray-500"
-                    : item.label === "Refer a Friend"
-                    ? "text-[#411294] cursor-pointer font-medium group-hover:text-gray-900"
-                    : "cursor-pointer text-gray-900"
+                    ? 'cursor-text text-gray-500'
+                    : item.label === 'Refer a Friend'
+                    ? 'text-[#411294] cursor-pointer font-medium group-hover:text-gray-900'
+                    : 'cursor-pointer text-gray-900'
                 } w-full`}
                 onClick={(e) => {
                   if (item.disabled) {

@@ -6,7 +6,7 @@ import { footerData } from '@/utils/data';
 function ArtistProfilePage() {
   return (
     <div>
-      <Navbar />
+      <Navbar showAuth={false} />
       <ArtistProfile />
       <Footer footerData={footerData} />
     </div>

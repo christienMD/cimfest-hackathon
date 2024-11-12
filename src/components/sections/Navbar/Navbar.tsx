@@ -8,11 +8,10 @@ import {
   SheetContent,
   SheetHeader,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import AnnouncementAlert from "../AnnouncementAlert/AnnouncementAlert";
-import GetStarted from "../GetStarted/GetStarted";
-import Logo from "../Logo/Logo";
-
+} from '@/components/ui/sheet';
+import AnnouncementAlert from '../AnnouncementAlert/AnnouncementAlert';
+import GetStarted from '../GetStarted/GetStarted';
+import Logo from '../Logo/Logo';
 
 const Navbar = () => {
   const NavigationLinks = ({
@@ -59,7 +58,7 @@ const Navbar = () => {
                 <Link to="/">AFRO TALENT</Link>
               </h1>
             </div> */}
-            <Logo/>
+            <Logo />
 
             {/* Desktop Navigation - Centered */}
             <div className="hidden md:flex flex-1 justify-center gap-8">
@@ -80,7 +79,7 @@ const Navbar = () => {
               <Sheet>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon" className="ml-2">
-                    <MenuIcon className="h-6 w-6" />
+                    <MenuIcon className="h-8 w-8" />
                   </Button>
                 </SheetTrigger>
                 <SheetContent

@@ -1,4 +1,3 @@
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from '@/pages/Home';
 import AboutPage from '@/pages/About';
@@ -8,8 +7,10 @@ import LandingPage from '@/pages/Landing';
 import NotFoundPage from '@/pages/NotFoundPage';
 import AIQuestions from '@/pages/AIQuestions';
 import TalentHub from '@/pages/TalentHub';
-import CoachChannel from "@/pages/CoachChannel";
+import CoachChannel from '@/pages/CoachChannel';
 import Contact from '@/pages/Contact';
+import ArtistProfilePage from '@/pages/ArtistProfilePage';
+import CoachProfilePage from '@/pages/CoachProfilePage';
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
     element: <SignupPage />,
   },
   {
-    path: "/coach-channel",
+    path: '/coach-channel',
     element: <CoachChannel />,
   },
   {
@@ -48,6 +49,14 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Contact />,
+  },
+  {
+    path: '/artist-profile',
+    element: <ArtistProfilePage />,
+  },
+  {
+    path: '/coach-profile',
+    element: <CoachProfilePage />,
   },
 ]);
 

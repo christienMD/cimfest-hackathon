@@ -1,7 +1,14 @@
+import ContactUs from '@/components/sections/ContactUs/ContactUs';
+import Footer from '@/components/sections/Footer/Footer';
+import Navbar from '@/components/sections/Navbar/Navbar';
+import { footerData } from '@/utils/data';
+
 const Contact = () => {
   return (
-    <div className="bg-afro-base-bg p-6 h-screen">
-      <h1 className="text-3xl text-white font-bold">Contact Us</h1>
+    <div className="bg-afro-base-bg">
+      <Navbar />
+      <ContactUs />
+      <Footer footerData={footerData} />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Linkedin, Facebook, Instagram, Twitter } from 'lucide-react';
+import Logo from '../Logo/Logo';
 
 interface FooterSection {
   title: string;
@@ -16,16 +17,7 @@ const Footer = ({ footerData }: FooterSectionProps) => {
       <div className="container mx-auto px-4">
         {/* Logo Section */}
         <div className="mb-12">
-          <div className="flex items-center gap-3">
-            <img
-              src="https://www.figma.com/file/Hw24rKXR9xcsS8NyturKwh/image/8482786bdc2517476ff9f26bc62e5adbf3a5ceb8"
-              alt="Afro Coach"
-              width={40}
-              height={40}
-              className="w-10 h-10"
-            />
-            <span className="text-xl font-bold">AFRO COACH</span>
-          </div>
+         <Logo />
         </div>
 
         {/* Navigation Sections */}

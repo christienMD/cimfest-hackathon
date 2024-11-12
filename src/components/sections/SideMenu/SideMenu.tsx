@@ -62,7 +62,7 @@ const Sidemenu = () => {
       </div>
 
       {/* Desktop Sidebar */}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block mt-2">
         <h1 className="text-2xl font-bold mb-6 text-[#FFF8F8]">Categories</h1>
         <div className="flex flex-col space-y-2">
           {categories.map((category) => (

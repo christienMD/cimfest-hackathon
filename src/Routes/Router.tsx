@@ -44,6 +44,10 @@ const router = createBrowserRouter([
     path: '/suggest',
     element: <AIQuestions />,
   },
+  {
+    path: '/contact',
+    element: <AIQuestions />,
+  },
 ]);
 
 function Router() {

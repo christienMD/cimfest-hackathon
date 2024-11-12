@@ -99,9 +99,11 @@ export function UserProfile() {
         </DropdownMenuGroup>
         <DropdownMenuSeparator className="bg-[#411294]/20" />
         <DropdownMenuItem className="hover:bg-[#411294]/20 hover:text-gray-900 focus:bg-[#411294]/20 focus:text-gray-900">
-          <button className="w-full text-left cursor-pointer text-gray-900">
-            Logout
-          </button>
+          <Link to="/">
+            <button className="w-full text-left cursor-pointer text-gray-900">
+              Logout
+            </button>
+          </Link>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

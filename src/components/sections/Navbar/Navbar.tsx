@@ -53,7 +53,7 @@ const Navbar = ({ showAuth = true, logoRoute }: Props) => {
       >
         <Link to="/login" className="w-full">
           <div className="absolute inset-0 rounded-[20px] bg-gradient-to-r from-[#411294] to-[#9C64FF] opacity-0 group-hover:opacity-20 transition-opacity" />
-          <div className="h-full w-full flex items-center justify-center bg-gradient-to-r from-[#323052] to-[#411294] text-white rounded-[17px] font-bold">
+          <div className="h-full w-full flex items-center justify-center bg-transparent text-white rounded-[17px] font-bold">
             Login
           </div>
         </Link>

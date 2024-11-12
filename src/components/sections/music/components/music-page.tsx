@@ -33,16 +33,16 @@ export default function MusicPage() {
           className="hidden dark:block"
         />
       </div>
-      <div className="hidden md:block border-r-afro-base-bg">
+      <div className="hidden md:block border-afro-base-bg">
         <Menu />
         <div className="border-t border-r-afro-base-bg">
-          <div className="bg-afro-base-bg border-r-afro-base-bg text-white">
+          <div className="bg-afro-base-bg border-afro-base-bg text-white">
             <div className="grid lg:grid-cols-5">
               <Sidebar
                 playlists={playlists}
                 className="hidden lg:block border-r-afro-base-bg"
               />
-              <div className="col-span-3 lg:col-span-4 lg:border-l">
+              <div className="col-span-3 lg:col-span-4 lg:border-l border-afro-base-bg">
                 <div className="h-full px-4 py-6 lg:px-8">
                   <Tabs defaultValue="music" className="h-full space-y-6">
                     <div className="space-between flex items-center">

@@ -9,15 +9,17 @@ interface FooterSection {
 
 interface FooterSectionProps {
   footerData: FooterSection[];
+  logoRoute?: string;
 }
 
-const Footer = ({ footerData }: FooterSectionProps) => {
+
+const Footer = ({ footerData , logoRoute }: FooterSectionProps) => {
   return (
     <footer className="bg-[#2E2B4A] text-white py-16">
       <div className="container mx-auto px-4">
         {/* Logo Section */}
         <div className="mb-12">
-         <Logo />
+         <Logo route={logoRoute} />
         </div>
 
         {/* Navigation Sections */}

@@ -1,116 +1,113 @@
 import React, { useState } from 'react';
-
-interface FormData {
-  location: string;
-  category: string;
-  gender: string;
-  musicType: string;
-}
+import AuthLogo from '../AuthLogo/AuthLogo';
 
 const AIQuestionsPage: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    location: '',
-    category: '',
-    gender: '',
+  const [formData, setFormData] = useState({
+    residence: '',
+    genre: '',
+    coachGender: '',
     musicType: '',
   });
-  const [isLoading, setIsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ): void => {
-    const { name, value } = event.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const isFormComplete = Object.values(formData).every((value) => value.trim() !== '');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
-    event.preventDefault();
-    setIsLoading(true);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!isFormComplete) return;
 
-    // Simulate loading process
+    setLoading(true);
+    // Simulate API call
     setTimeout(() => {
-      setIsLoading(false);
-      console.log('Form data:', formData);
+      setLoading(false);
+      alert('Form submitted successfully!');
     }, 2000);
   };
 
   return (
-    <div className="flex h-screen bg-[#1e1e2c] p-4">
-      <div className="m-auto w-full max-w-md p-6 bg-[#2c2c3d] rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold mb-6 text-white">AfroCoach Personalization AI</h1>
-        <p className="mb-6 text-white">
-          Personalized feed for user experience. Answer the questions and the AI
-          will recommend you coaches with your refence.
-        </p>
-        {isLoading ? (
-          <div className="flex justify-center items-center h-48">
-            <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-white"></div>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <label
-                htmlFor="location"
-                className="block mb-2 text-sm font-medium text-white"
-              >
-                Where do you reside?
-              </label>
-              <input
-                type="text"
-                id="location"
-                name="location"
-                value={formData.location}
-                onChange={handleInputChange}
-                className="bg-[#3d3d4e] border border-[#3d3d4e] text-white text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="category"
-                className="block mb-2 text-sm font-medium text-white"
-              >
-                What is your category or genre of music?
-              </label>
-              <input
-                type="text"
-                id="category"
-                name="category"
-                value={formData.category}
-                onChange={handleInputChange}
-                className="bg-[#3d3d4e] border border-[#3d3d4e] text-white text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="gender"
-                className="block mb-2 text-sm font-medium text-white"
-              >
-                What is your preferred coach gender?
-              </label>
-              <input
-                type="text"
-                id="gender"
-                name="gender"
-                value={formData.gender}
-                onChange={handleInputChange}
-                className="bg-[#3d3d4e] border border-[#3d3d4e] text-white text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              className="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none"
-            >
-              Submit
-            </button>
-          </form>
-        )}
+    <div className="flex flex-col md:flex-row items-center justify-center bg-gray-900 text-white">
+      <div className="w-full lg:h-screen md:w-1/3 flex flex-col items-center justify-center text-center bg-[#37345C] p-8">
+        <div className="text-3xl font-bold mb-4"><AuthLogo /></div>
+        <h2 className="text-xl font-semibold">Personalized feed for user experience</h2>
+        <p className="mt-4">Answer the questions and our AI will recommend you coaches according to your preference.</p>
       </div>
+      <form
+        onSubmit={handleSubmit}
+        className="w-full lg:h-screen bg-[#23213A] p-8 flex flex-col justify-center space-y-6"
+      >
+        <label className="block">
+          <span>1. Where do you reside?</span>
+          <input
+            type="text"
+            name="residence"
+            value={formData.residence}
+            onChange={handleChange}
+            className="mt-1 block w-full bg-gray-100 border border-gray-600 rounded-md p-2 text-black"
+            required
+          />
+        </label>
+
+        <label className="block">
+          <span>2. What is your category or genre of music?</span>
+          <input
+            type="text"
+            name="genre"
+            value={formData.genre}
+            onChange={handleChange}
+            className="mt-1 block w-full bg-gray-100 border border-gray-600 rounded-md p-2 text-black"
+            required
+          />
+        </label>
+
+        <label className="block">
+          <span>3. What gender of coach do you prefer?</span>
+          <input
+            type="text"
+            name="coachGender"
+            value={formData.coachGender}
+            onChange={handleChange}
+            className="mt-1 block w-full bg-gray-100 border border-gray-600 rounded-md p-2 text-black"
+            required
+          />
+        </label>
+        <button
+          type="submit"
+          className={`w-full py-3 rounded-md text-white font-semibold ${isFormComplete ? 'bg-[#37345C]' : 'bg-gray-500'} hover:bg-[#C4A2FF] transition-colors`}
+          disabled={!isFormComplete}
+        >
+          {loading ? (
+            <svg
+              className="animate-spin h-5 w-5 mx-auto text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8v4l2-2-2-2a8 8 0 100 16l-2-2 2-2v4a8 8 0 01-8-8z"
+              ></path>
+            </svg>
+          ) : (
+            'Submit'
+          )}
+        </button>
+      </form>
     </div>
   );
 };

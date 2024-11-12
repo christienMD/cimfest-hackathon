@@ -1,3 +1,4 @@
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from '@/pages/Home';
 import AboutPage from '@/pages/About';
@@ -7,6 +8,7 @@ import LandingPage from '@/pages/Landing';
 import NotFoundPage from '@/pages/NotFoundPage';
 import AIQuestions from '@/pages/AIQuestions';
 import TalentHub from '@/pages/TalentHub';
+import CoachChannel from "@/pages/CoachChannel";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <SignupPage />,
+  },
+  {
+    path: "/coach-channel",
+    element: <CoachChannel />,
   },
   {
     path: '/suggest',

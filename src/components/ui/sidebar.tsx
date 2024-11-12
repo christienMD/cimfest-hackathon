@@ -149,7 +149,7 @@ const SidebarProvider = React.forwardRef<
           </div>
         </TooltipProvider>
       </SidebarContext.Provider>
-    )
+    );
   }
 )
 SidebarProvider.displayName = "SidebarProvider"

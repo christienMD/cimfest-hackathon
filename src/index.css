@@ -97,6 +97,33 @@
   ::-webkit-scrollbar-track {
     background: #f1f1f1;
   }
+
+
+  /* Custom scrollbar */
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border-radius: 3px;
+}
+
+textarea {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 transparent;
+}
+
+/* Focus styles */
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 }
 .heading {
   @apply text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8;

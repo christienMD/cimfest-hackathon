@@ -321,7 +321,7 @@ const ArtistForm = () => {
 
           <button className="w-full h-[46px] bg-[#6E1EFA] text-white rounded-[20px] mt-4 hover:bg-[#5c19d4] hover:opacity-75 transition-colors">
             <Link
-              to="/home"
+              to="/suggest"
               // type="submit"
             >
               Sign up

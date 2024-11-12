@@ -12,6 +12,7 @@ import {
 import AnnouncementAlert from "../AnnouncementAlert/AnnouncementAlert";
 import GetStarted from "../GetStarted/GetStarted";
 import Logo from "../Logo/Logo";
+import { UserProfile } from "../UserProfile/UserProfile";
 
 interface Props {
   showAuth?: boolean;
@@ -81,6 +82,8 @@ const Navbar = ({ showAuth = true }: Props) => {
                   <AuthButtons />
                 </div>
               )}
+
+              {!showAuth && <UserProfile />}
             </div>
 
             {/* Mobile Menu Button */}

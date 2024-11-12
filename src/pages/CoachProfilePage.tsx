@@ -6,7 +6,7 @@ import { footerData } from '@/utils/data';
 function CoachProfilePage() {
   return (
     <div>
-      <Navbar />
+      <Navbar showAuth={false} />
       <CoachProfile />
       <Footer footerData={footerData} />
     </div>

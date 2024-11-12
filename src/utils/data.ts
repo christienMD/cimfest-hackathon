@@ -77,69 +77,88 @@ export interface Album {
 
 export const listenNowAlbums: Album[] = [
   {
-    name: "React Rendezvous",
-    artist: "Ethan Byte",
+    name: "Fleur et Vénin",
+    artist: "Ben Decca",
     cover:
-      "https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=300&dpr=2&q=80",
+      "/images/ben-decca.jpeg",
   },
   {
-    name: "Async Awakenings",
-    artist: "Nina Netcode",
+    name: "Bamileke Heritage",
+    artist: "Prince Eyango",
     cover:
-      "https://images.unsplash.com/photo-1468817814611-b7edf94b5d60?w=300&dpr=2&q=80",
+      "/images/prince-eyango.jpeg",
   },
   {
-    name: "The Art of Reusability",
-    artist: "Lena Logic",
-    cover:
-      "https://images.unsplash.com/photo-1528143358888-6d3c7f67bd5d?w=300&dpr=2&q=80",
+    name: "Kanda na me",
+    artist: "Annie Anzoue",
+    cover: "/images/annie-anzoue.jpeg",
   },
   {
-    name: "Stateful Symphony",
-    artist: "Beth Binary",
+    name: "Le Meilleur de Tala Andre Marie",
+    artist: "Tala André Marie",
     cover:
-      "https://images.unsplash.com/photo-1490300472339-79e4adc6be4a?w=300&dpr=2&q=80",
+      "/images/andre-talla.jpeg",
+  },
+  {
+    name: "Jalous",
+    artist: "Kameni",
+    cover:
+      "/images/kameni.jpg",
   },
 ];
 
+
 export const madeForYouAlbums: Album[] = [
   {
-    name: "Thinking Components",
-    artist: "Lena Logic",
+    name: "Therapy",
+    artist: "Libianca",
     cover:
-      "https://images.unsplash.com/photo-1615247001958-f4bc92fa6a4a?w=300&dpr=2&q=80",
+      "/images/libianca.jpeg",
   },
   {
-    name: "Functional Fury",
-    artist: "Beth Binary",
+    name: "African Woman",
+    artist: "Charlotte Dipanda",
     cover:
-      "https://images.unsplash.com/photo-1513745405825-efaf9a49315f?w=300&dpr=2&q=80",
+      "/images/charlotte-dipanda.jpeg",
   },
   {
-    name: "React Rendezvous",
-    artist: "Ethan Byte",
+    name: "Sade",
+    artist: "Salatiel",
     cover:
-      "https://images.unsplash.com/photo-1614113489855-66422ad300a4?w=300&dpr=2&q=80",
+      "/images/salatiel.jpeg",
   },
   {
-    name: "Stateful Symphony",
-    artist: "Beth Binary",
+    name: "On Est Ensemble",
+    artist: "Mr. Leo",
     cover:
-      "https://images.unsplash.com/photo-1446185250204-f94591f7d702?w=300&dpr=2&q=80",
+      "/images/mr-leo.jpeg",
   },
   {
-    name: "Async Awakenings",
-    artist: "Nina Netcode",
+    name: "Ndi Ndol’am",
+    artist: "Lady Ponce",
     cover:
-      "https://images.unsplash.com/photo-1468817814611-b7edf94b5d60?w=300&dpr=2&q=80",
+      "/images/lady.jpeg",
   },
   {
-    name: "The Art of Reusability",
-    artist: "Lena Logic",
+    name: "Pour Nous",
+    artist: "Tayc",
     cover:
-      "https://images.unsplash.com/photo-1490300472339-79e4adc6be4a?w=300&dpr=2&q=80",
+     "/images/tayc.jpeg",
+  },
+  {
+    name: "Pour Nous",
+    artist: "Tenor",
+    cover:
+     "/images/tenor.jpeg",
+  },
+  {
+    name: "Ndolo",
+    artist: "Rinyu",
+    cover:
+      "/images/runyi.jpeg",
   },
 ];
+
 
 export type Playlist = (typeof playlists)[number];
 

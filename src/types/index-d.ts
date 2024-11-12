@@ -6,3 +6,9 @@ export interface Message {
   isCoach: boolean;
   avatar?: string;
 }
+
+export interface Album {
+  name: string;
+  artist: string;
+  cover: string;
+}

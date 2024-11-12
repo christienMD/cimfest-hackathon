@@ -8,7 +8,7 @@ const AuthLogo = () => {
     >
       <div className="p-0.5">
         <img
-          src="https://www.figma.com/file/Hw24rKXR9xcsS8NyturKwh/image/8482786bdc2517476ff9f26bc62e5adbf3a5ceb8"
+          src="/afro-coach-logo.png"
           alt="Afro Coach Logo"
           className="w-10 h-10 md:w-14 md:h-14"
         />

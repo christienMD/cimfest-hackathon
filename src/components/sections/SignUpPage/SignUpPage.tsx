@@ -39,72 +39,81 @@ const coachCategories = [
 ];
 
 // Updated form validation schema
-const formSchema = z.object({
-  image: z.any().optional(),
-  phoneNumber: z
-    .string()
-    .regex(/^\+?[0-9]{8,15}$/, "Please enter a valid phone number"),
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  category: z.string().min(1, "Please select a category"),
-  password: z
-    .string()
-    .min(6, "Password must be at least 6 characters"),
-  confirmPassword: z.string(),
-  keepSignedIn: z.boolean().default(false),
-}).refine((data) => data.password === data.confirmPassword, {
-  message: "Passwords don't match",
-  path: ["confirmPassword"],
-});
+const formSchema = z
+  .object({
+    image: z.any().optional(),
+    phoneNumber: z
+      .string()
+      .regex(/^\+?[0-9]{8,15}$/, "Please enter a valid phone number"),
+    name: z.string().min(2, "Name must be at least 2 characters"),
+    category: z.string().min(1, "Please select a category"),
+    password: z.string().min(6, "Password must be at least 6 characters"),
+    confirmPassword: z.string(),
+    keepSignedIn: z.boolean().default(false),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords don't match",
+    path: ["confirmPassword"],
+  });
 
 type FormData = z.infer<typeof formSchema>;
 
 const SignupForm = () => {
   return (
-    <div className="min-h-screen flex flex-col md:flex-row">
-      <div className="w-full md:w-[50%] flex items-center justify-center p-4">
-        <div className="w-full max-w-[533px] px-4 md:px-6">
-          <AuthLogo />
+    <>
+      <div className="min-h-screen flex flex-col md:flex-row">
+        <div className="w-full md:w-[50%] flex items-center justify-center p-4">
+          <div className="w-full max-w-[533px] px-4 md:px-6">
+            <AuthLogo />
 
-          <div className="text-center mb-6">
-            <h1 className="text-xl font-medium mb-1">Sign In</h1>
-            <p className="text-gray-500 text-sm">Welcome back! Enter your</p>
+            <div className="text-center mb-6">
+              <h1 className="text-xl font-medium mb-1">Sign In</h1>
+              <p className="text-gray-500 text-sm">Welcome back! Enter your</p>
+            </div>
+
+            <Tabs defaultValue="artist" className="w-full max-w-md mx-auto">
+              <TabsList className="grid w-full grid-cols-2 h-12 p-1 bg-[#6E1EFA] bg-opacity-80 rounded-md">
+                <TabsTrigger
+                  value="artist"
+                  className="rounded-md text-base font-medium data-[state=active]:bg-white data-[state=active]:text-green-700 data-[state=inactive]:text-white hover:text-white/90 transition-colors"
+                >
+                  Artist
+                </TabsTrigger>
+                <TabsTrigger
+                  value="coach"
+                  className="rounded-md text-base font-medium data-[state=active]:bg-white data-[state=active]:text-green-700 data-[state=inactive]:text-white hover:text-white/90 transition-colors"
+                >
+                  Coach
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="artist">
+                <ArtistForm />
+              </TabsContent>
+              <TabsContent value="coach">
+                <CoachForm />
+              </TabsContent>
+            </Tabs>
           </div>
+        </div>
 
-          <Tabs defaultValue="artist" className="w-full max-w-md mx-auto">
-            <TabsList className="grid w-full grid-cols-2 h-12 p-1 bg-[#6E1EFA] bg-opacity-80 rounded-md">
-              <TabsTrigger
-                value="artist"
-                className="rounded-md text-base font-medium data-[state=active]:bg-white data-[state=active]:text-green-700 data-[state=inactive]:text-white hover:text-white/90 transition-colors"
-              >
-                Artist
-              </TabsTrigger>
-              <TabsTrigger
-                value="coach"
-                className="rounded-md text-base font-medium data-[state=active]:bg-white data-[state=active]:text-green-700 data-[state=inactive]:text-white hover:text-white/90 transition-colors"
-              >
-                Coach
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="artist">
-              <ArtistForm />
-            </TabsContent>
-            <TabsContent value="coach">
-              <CoachForm />
-            </TabsContent>
-          </Tabs>
+        <div className="hidden md:flex items-center justify-center w-full md:w-[50%] p-4 md:p-8 lg:p-10">
+          <div className="w-full max-w-[500px] h-[400px] md:h-[500px] lg:h-[550px] rounded-lg overflow-hidden">
+            <img
+              src="/mixa.png"
+              alt="Studio Mixer"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
         </div>
       </div>
-
-      <div className="hidden md:flex items-center justify-center w-full md:w-[50%] p-4 md:p-8 lg:p-10">
-        <div className="w-full max-w-[500px] h-[400px] md:h-[500px] lg:h-[550px] rounded-lg overflow-hidden">
-          <img
-            src="/mixa.png"
-            alt="Studio Mixer"
-            className="w-full h-full object-cover rounded-lg"
-          />
-        </div>
-      </div>
-    </div>
+      <p className="text-base my-6 py-4 px-6 sm:px-10 text-center text-gray-500 w-full sm:max-w-4xl">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta eaque
+        laudantium animi ullam, commodi amet nobis exercitationem quasi error
+        dignissimos ipsam similique mollitia nostrum cumque, fuga necessitatibus
+        deserunt quis! Neque ullam voluptate facilis nobis eligendi aut sint,
+        magnam amet odio.
+      </p>
+    </>
   );
 };
 
@@ -225,7 +234,10 @@ const ArtistForm = () => {
             name="category"
             render={({ field }) => (
               <FormItem>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select your category" />
@@ -307,12 +319,14 @@ const ArtistForm = () => {
             </Link>
           </div>
 
-          <Button
-            type="submit"
-            className="w-full h-[46px] bg-[#6E1EFA] text-white rounded-[20px] mt-4 hover:bg-[#5c19d4] hover:opacity-75 transition-colors"
-          >
-            Sign up
-          </Button>
+          <button className="w-full h-[46px] bg-[#6E1EFA] text-white rounded-[20px] mt-4 hover:bg-[#5c19d4] hover:opacity-75 transition-colors">
+            <Link
+              to="/suggest"
+              // type="submit"
+            >
+              Sign up
+            </Link>
+          </button>
 
           <div className="text-center text-sm text-gray-500">
             Already have an account?{" "}
@@ -443,7 +457,10 @@ const CoachForm = () => {
             name="category"
             render={({ field }) => (
               <FormItem>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select your coaching category" />
@@ -529,7 +546,7 @@ const CoachForm = () => {
             type="submit"
             className="w-full h-[46px] bg-[#6E1EFA] text-white rounded-[20px] mt-4 hover:bg-[#5c19d4] hover:opacity-75 transition-colors"
           >
-            Sign up
+            <Link to="/coach-channel">Sign up</Link>
           </Button>
 
           <div className="text-center text-sm text-gray-500">

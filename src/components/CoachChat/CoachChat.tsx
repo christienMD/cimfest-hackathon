@@ -9,7 +9,7 @@ export function CoachChat() {
     {
       id: "1",
       sender: "Coach",
-      content: "Hello Cyril, did you test out the new guitar?",
+      content: "Hello Cyril, Here are some modifications to make on the beat?",
       timestamp: new Date(),
       isCoach: true,
       avatar: "/coach-avatar.png",
@@ -17,7 +17,7 @@ export function CoachChat() {
     {
       id: "2",
       sender: "Cyril",
-      content: "Yes I did",
+      content: "Thank you Madam. Will start working on them immediately.",
       timestamp: new Date(),
       isCoach: false,
       avatar: "/artist-avatar.png",

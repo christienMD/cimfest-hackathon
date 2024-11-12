@@ -1,9 +1,16 @@
-import AIQuestionsPage from "@/components/sections/Questions/AIQuestionsPage"
+import Footer from '@/components/sections/Footer/Footer';
+import Navbar from '@/components/sections/Navbar/Navbar';
+import AIQuestionsPage from '@/components/sections/Questions/AIQuestionsPage';
+import { footerData } from '@/utils/data';
 
 const AIQuestions = () => {
-    return (
+  return (
+    <div>
+      <Navbar />
       <AIQuestionsPage />
-    )
-  }
-  
-  export default AIQuestions
+      <Footer footerData={footerData} />
+    </div>
+  );
+};
+
+export default AIQuestions;

@@ -17,7 +17,7 @@ import Sidebar from './sidebar'
 export default function MusicPage() {
   return (
     <>
-      <div className="md:hidden bg-afro-base-bg border-afro-base-bg">
+      <div className="md:hidden bg-[#2E2B4A] border-afro-base-bg">
         <img
           src="/coach.png"
           width={1280}
@@ -33,16 +33,16 @@ export default function MusicPage() {
           className="hidden dark:block"
         />
       </div>
-      <div className="hidden md:block border-r-afro-base-bg">
+      <div className="hidden md:block border-afro-base-bg">
         <Menu />
         <div className="border-t border-r-afro-base-bg">
-          <div className="bg-afro-base-bg border-r-afro-base-bg text-white">
+          <div className="bg-[#2E2B4A] border-afro-base-bg text-white">
             <div className="grid lg:grid-cols-5">
               <Sidebar
                 playlists={playlists}
                 className="hidden lg:block border-r-afro-base-bg"
               />
-              <div className="col-span-3 lg:col-span-4 lg:border-l">
+              <div className="col-span-3 lg:col-span-4 lg:border-l border-afro-base-bg">
                 <div className="h-full px-4 py-6 lg:px-8">
                   <Tabs defaultValue="music" className="h-full space-y-6">
                     <div className="space-between flex items-center">
@@ -64,7 +64,7 @@ export default function MusicPage() {
                     </div>
                     <TabsContent
                       value="music"
-                      className="border-none p-0 outline-none bg-afro-base-bg"
+                      className="border-none p-0 outline-none bg-[#2E2B4A]"
                     >
                       <div className="flex items-center justify-between">
                         <div className="space-y-1">
@@ -77,7 +77,7 @@ export default function MusicPage() {
                         </div>
                       </div>
                       <Separator className="my-4" />
-                      <div className="relative bg-afro-base-bg">
+                      <div className="relative bg-[#2E2B4A]">
                         <ScrollArea>
                           <div className="flex space-x-4 pb-4">
                             {listenNowAlbums.map((album) => (

@@ -1,28 +1,27 @@
-import { Button } from "@/components/ui/button";
-import { MenuIcon } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Button } from '@/components/ui/button';
+import { MenuIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-import { navLinks } from "@/utils/data";
+import { navLinks } from '@/utils/data';
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import AnnouncementAlert from "../AnnouncementAlert/AnnouncementAlert";
-import GetStarted from "../GetStarted/GetStarted";
-import Logo from "../Logo/Logo";
-import { UserProfile } from "../UserProfile/UserProfile";
+} from '@/components/ui/sheet';
+import AnnouncementAlert from '../AnnouncementAlert/AnnouncementAlert';
+import GetStarted from '../GetStarted/GetStarted';
+import Logo from '../Logo/Logo';
+import { UserProfile } from '../UserProfile/UserProfile';
 
 interface Props {
   showAuth?: boolean;
   logoRoute?: string;
 }
 
-
-const Navbar = ({ showAuth = true , logoRoute }: Props) => {
+const Navbar = ({ showAuth = true, logoRoute }: Props) => {
   const NavigationLinks = ({
-    className = "navbar-center mb-4 md:mb-0 font-bold text-xl",
+    className = 'navbar-center mb-4 md:mb-0 font-bold text-xl',
   }) => (
     <ul
       className={`flex flex-col md:flex-row space-y-2 fond-medium text-lg md:space-y-0 md:space-x-4 ${className}`}
@@ -40,16 +39,16 @@ const Navbar = ({ showAuth = true , logoRoute }: Props) => {
     </ul>
   );
 
-  const AuthButtons = ({ className = "" }) => (
+  const AuthButtons = ({ className = '' }) => (
     <div
       className={`flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-4 ${className}`}
     >
       <button
         className="group relative h-[46px] w-full sm:w-[140px] text-base font-medium"
         style={{
-          padding: "3px",
-          background: "linear-gradient(90deg, #411294 0%, #9C64FF 100%)",
-          borderRadius: "20px",
+          padding: '3px',
+          background: 'linear-gradient(90deg, #411294 0%, #9C64FF 100%)',
+          borderRadius: '20px',
         }}
       >
         <Link to="/login" className="w-full">
@@ -65,11 +64,11 @@ const Navbar = ({ showAuth = true , logoRoute }: Props) => {
 
   return (
     <>
-      <AnnouncementAlert month="October" percentageDiscount={20} />
-      <nav className="fixed top-6 left-0 right-0 bg-afro-base-bg text-white z-30">
+      <AnnouncementAlert month="November" percentageDiscount={20} />
+      <nav className="fixed top-6 left-0 right-0 bg-afro-base-bg text-white z-30 ">
         <div className="px-4 md:px-11">
           <div className="flex items-center h-16 md:h-20">
-            <Logo route={logoRoute}/>
+            <Logo route={logoRoute} />
 
             {/* Desktop Navigation - Centered */}
             <div className="hidden md:flex flex-1 justify-center gap-8">
